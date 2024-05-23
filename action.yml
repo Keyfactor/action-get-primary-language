@@ -7,7 +7,7 @@ outputs:
   primaryLanguage: 
     description: 'Detected primary language for the repository'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
 
 branding:
