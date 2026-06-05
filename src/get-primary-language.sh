@@ -14,14 +14,14 @@ fi
 
 # Check for C# indicators
 if [[ -f "$REPO_ROOT/.sln" ]]; then
-  echo "primary_language=C\#" | tee -a $GITHUB_OUTPUT
+  echo "primary_language=C#" | tee -a $GITHUB_OUTPUT
   echo "Detected primary language: C#"
   exit 0
 fi
 
 # Check for .csproj files within one level deep
 if find "$REPO_ROOT" -maxdepth 2 -name "*.csproj" -type f | grep -q .; then
-  echo "primary_language=C\#" | tee -a $GITHUB_OUTPUT
+  echo "primary_language=C#" | tee -a $GITHUB_OUTPUT
   echo "Detected primary language: C#"
   exit 0
 fi
