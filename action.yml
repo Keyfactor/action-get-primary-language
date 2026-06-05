@@ -7,8 +7,10 @@ outputs:
   primaryLanguage: 
     description: 'Detected primary language for the repository'
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: 'composite'
+  steps:
+    - run: bash ${{ github.action_path }}/src/get-primary-language.sh
+      shell: bash
 
 branding:
   icon: 'flag'
