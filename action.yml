@@ -11,6 +11,7 @@ runs:
   steps:
     - run: bash ${{ github.action_path }}/src/get-primary-language.sh
       shell: bash
+      
 
 branding:
   icon: 'flag'
