@@ -4,14 +4,16 @@ inputs:
   token:
     description: 'GH Token'
 outputs:
-  primaryLanguage: 
+  primary_language: 
     description: 'Detected primary language for the repository'
+    value: ${{ steps.get_language.outputs.primary_language }}
 runs:
   using: 'composite'
   steps:
     - run: bash ${{ github.action_path }}/src/get-primary-language.sh
       shell: bash
-      
+      id: get_language
+
 
 branding:
   icon: 'flag'
